@@ -1,5 +1,6 @@
 import './App.css'
 import { HyperText } from './components/ui/hyper-text'
+import { TextAnimate } from './components/ui/text-animate'
 
 function App() {
   return (
@@ -49,9 +50,14 @@ function App() {
             </HyperText>
           </div>
           
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <TextAnimate 
+            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            animation="blurIn"
+            by="word"
+            delay={1.5}
+          >
             Join the world's most accurate prediction market. Make forecasts on real-world events and earn rewards for being right.
-          </p>
+          </TextAnimate>
 
           <div className="flex gap-4 justify-center pt-4">
             <button className="px-8 py-4 bg-purple-600 text-white text-lg font-semibold rounded-lg hover:bg-purple-700 transition transform hover:scale-105">
@@ -74,9 +80,13 @@ function App() {
             >
               Real-Time Markets
             </HyperText>
-            <p className="text-gray-400">
+            <TextAnimate 
+              className="text-gray-400"
+              animation="fadeIn"
+              by="word"
+            >
               Trade on live prediction markets with real-time odds and instant settlements.
-            </p>
+            </TextAnimate>
           </div>
 
           <div className="p-8 bg-white/5 backdrop-blur rounded-xl border border-white/10">
@@ -89,9 +99,13 @@ function App() {
             >
               Accurate Forecasts
             </HyperText>
-            <p className="text-gray-400">
+            <TextAnimate 
+              className="text-gray-400"
+              animation="fadeIn"
+              by="word"
+            >
               Harness the wisdom of crowds for the most accurate event predictions.
-            </p>
+            </TextAnimate>
           </div>
 
           <div className="p-8 bg-white/5 backdrop-blur rounded-xl border border-white/10">
@@ -104,29 +118,33 @@ function App() {
             >
               Earn Rewards
             </HyperText>
-            <p className="text-gray-400">
+            <TextAnimate 
+              className="text-gray-400"
+              animation="fadeIn"
+              by="word"
+            >
               Get rewarded for making accurate predictions and sharing your insights.
-            </p>
+            </TextAnimate>
           </div>
         </div>
 
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-6 mt-24 text-center">
           <div>
-            <div className="text-4xl font-bold text-white">$10M+</div>
-            <div className="text-gray-400 mt-2">Trading Volume</div>
+            <TextAnimate className="text-4xl font-bold text-white" animation="scaleUp" by="character">$10M+</TextAnimate>
+            <TextAnimate className="text-gray-400 mt-2" animation="fadeIn">Trading Volume</TextAnimate>
           </div>
           <div>
-            <div className="text-4xl font-bold text-white">50K+</div>
-            <div className="text-gray-400 mt-2">Active Traders</div>
+            <TextAnimate className="text-4xl font-bold text-white" animation="scaleUp" by="character">50K+</TextAnimate>
+            <TextAnimate className="text-gray-400 mt-2" animation="fadeIn">Active Traders</TextAnimate>
           </div>
           <div>
-            <div className="text-4xl font-bold text-white">1000+</div>
-            <div className="text-gray-400 mt-2">Markets</div>
+            <TextAnimate className="text-4xl font-bold text-white" animation="scaleUp" by="character">1000+</TextAnimate>
+            <TextAnimate className="text-gray-400 mt-2" animation="fadeIn">Markets</TextAnimate>
           </div>
           <div>
-            <div className="text-4xl font-bold text-white">92%</div>
-            <div className="text-gray-400 mt-2">Accuracy Rate</div>
+            <TextAnimate className="text-4xl font-bold text-white" animation="scaleUp" by="character">92%</TextAnimate>
+            <TextAnimate className="text-gray-400 mt-2" animation="fadeIn">Accuracy Rate</TextAnimate>
           </div>
         </div>
       </main>
