@@ -12,12 +12,16 @@ if (sendBtn && userInput && chatBox) {
     chatBox.scrollTop = chatBox.scrollHeight;
   }
 
-  async function handleSend() {
+async function handleSend() {
   const text = userInput.value.trim();
   if (!text) return;
 
   addMessage(text, "user");
   userInput.value = "";
+
+  // Disable button and input while waiting
+  sendBtn.disabled = true;
+  userInput.disabled = true;
 
   // Show thinking indicator
   addMessage("Thinking...", "bot");
@@ -43,6 +47,11 @@ if (sendBtn && userInput && chatBox) {
     console.error(err);
     chatBox.lastChild.remove();
     addMessage("Error: Could not reach server.", "bot");
+  } finally {
+    // Re-enable button and input
+    sendBtn.disabled = false;
+    userInput.disabled = true;
+    userInput.focus();
   }
 }
 

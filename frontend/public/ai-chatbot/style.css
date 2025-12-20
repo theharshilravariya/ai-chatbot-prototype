@@ -201,3 +201,14 @@ button:hover {
   background: #e5e7eb;
   color: #111827;
 }
+
+/* Disabled button styling */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
